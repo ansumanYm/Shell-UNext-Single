@@ -3,23 +3,26 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
-				"type": "GetMetadata",
+				"name": "Filter1",
+				"type": "Filter",
 				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.account_name",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
 			"account_name": {
-				"type": "string",
-				"defaultValue": "ab-7282"
+				"type": "array",
+				"defaultValue": [
+					"aaa",
+					"bbb",
+					"ccc"
+				]
 			}
 		},
 		"annotations": []
