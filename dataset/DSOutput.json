@@ -5,6 +5,9 @@
 			"referenceName": "AzureStorageLinkedService",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Old Folder"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
