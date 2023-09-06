@@ -1,0 +1,30 @@
+{
+	"name": "DSInput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "emp.txt",
+				"folderPath": "input",
+				"fileSystem": "container1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "welcome to employee File by ansuman",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
